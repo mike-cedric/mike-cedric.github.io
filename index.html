@@ -313,5 +313,26 @@
 
 <!-- Scripts JavaScript -->
 <script src="js/main.js"></script>
+<script>
+  // Sélection des éléments du menu
+  const hamMenu = document.querySelector('.header__main-ham-menu');
+  const hamMenuClose = document.querySelector('.header__main-ham-menu-close');
+  const smMenu = document.querySelector('.header__sm-menu');
+
+  // Ouverture du menu mobile
+  hamMenu.addEventListener('click', () => {
+    smMenu.classList.add('open'); // Affiche le menu mobile
+    hamMenu.classList.add('d-none'); // Cache l'icône de menu hamburger
+    hamMenuClose.classList.remove('d-none'); // Affiche l'icône de fermeture
+  });
+
+  // Fermeture du menu mobile
+  hamMenuClose.addEventListener('click', () => {
+    smMenu.classList.remove('open'); // Cache le menu mobile
+    hamMenu.classList.remove('d-none'); // Affiche l'icône de menu hamburger
+    hamMenuClose.classList.add('d-none'); // Cache l'icône de fermeture
+  });
+</script>
+
 </body>
 </html>

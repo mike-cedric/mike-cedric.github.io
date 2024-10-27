@@ -708,3 +708,12 @@ textarea {
   font-size: 1.8rem;
   color: #333;
 }
+
+.header__sm-menu {
+  display: none; /* Masque le menu mobile par défaut */
+  /* Vous pouvez ajouter ici d'autres styles pour le menu mobile */
+}
+
+.header__sm-menu.open {
+  display: block; /* Affiche le menu mobile lorsque la classe 'open' est présente */
+}
