@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Métadonnées -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Titre de la page -->
+  <title>Analyse des performances des joueurs de football | Fossi Cedric</title>
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/png/favicon.png" type="image/x-icon" />
+</head>
+<body>
+  <!-- En-tête identique à la page d'accueil -->
+  <header class="header">
+    <!-- Contenu de l'en-tête -->
+    <div class="header__content">
+      <div class="header__logo-container">
+        <a href="./" class="header__logo-link">
+          <span class="header__logo-sub">Fossi Cedric</span>
+        </a>
+      </div>
+      <div class="header__main">
+        <ul class="header__links">
+          <li class="header__link-wrapper">
+            <a href="index.html" class="header__link">Accueil</a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="index.html#about" class="header__link">À propos</a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="index.html#projects" class="header__link">Projets</a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="index.html#contact" class="header__link">Contact</a>
+          </li>
+        </ul>
+        <!-- Menu mobile -->
+        <div class="header__main-ham-menu-cont">
+          <img
+            src="./assets/png/menu-icon.png"
+            alt="Menu icon"
+            class="header__main-ham-menu"
+          />
+          <img
+            src="./assets/png/close-icon.png"
+            alt="Close icon"
+            class="header__main-ham-menu-close d-none"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Contenu du menu mobile -->
+    <div class="header__sm-menu">
+      <div class="header__sm-menu-content">
+        <ul class="header__sm-menu-links">
+          <li class="header__sm-menu-link">
+            <a href="index.html">Accueil</a>
+          </li>
+          <li class="header__sm-menu-link">
+            <a href="index.html#about">À propos</a>
+          </li>
+          <li class="header__sm-menu-link">
+            <a href="index.html#projects">Projets</a>
+          </li>
+          <li class="header__sm-menu-link">
+            <a href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <main>
+    <!-- Section Hero du projet -->
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Analyse des performances des joueurs de football (2013-2021)</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            Étude approfondie des performances des joueurs des cinq grands championnats européens.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Détails du projet -->
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          
+          <!-- Contenu principal -->
+          <div class="project-details__content-main">
+            <!-- Introduction -->
+            <div class="project-details__desc">
+              <h2 class="project-details__content-title">Introduction</h2>
+              <p class="project-details__desc-para">
+                Le football est l'un des sports les plus populaires au monde, et l'analyse des données joue un rôle crucial dans la compréhension et l'amélioration des performances des joueurs et des équipes. Cette étude se concentre sur l'analyse approfondie des performances des joueurs de football de 2013 à 2021, en se focalisant sur les cinq grands championnats européens : Premier League, La Liga, Bundesliga, Serie A et Ligue 1.
+              </p>
+              <p class="project-details__desc-para">
+                L'objectif est de découvrir des tendances significatives et de déterminer si les caractéristiques des joueurs peuvent prédire le championnat auquel ils appartiennent ou leur niveau de performance.
+              </p>
+            </div>
+            <!-- Méthodologie -->
+            <div class="project-details__desc">
+              <h2 class="project-details__content-title">Méthodologie</h2>
+              <p class="project-details__desc-para">
+                Pour mener à bien ce projet d'analyse des performances des joueurs de football, nous avons suivi une approche structurée en plusieurs étapes clés :
+              </p>
+              <div class="project-details__desc-list">
+                <p><strong>1. Collecte et Préparation des Données :</strong></p>
+                <p class="project-details__desc-para">
+                  • Importation des données depuis Kaggle, incluant les statistiques détaillées des joueurs.<br>
+                  • Nettoyage des données pour gérer les valeurs manquantes, supprimer les doublons et uniformiser les formats.
+                </p>
+                <p><strong>2. Analyse Exploratoire des Données (EDA) :</strong></p>
+                <p class="project-details__desc-para">
+                  • Calcul des statistiques descriptives pour comprendre les distributions des variables.<br>
+                  • Visualisations graphiques pour identifier les tendances et les anomalies.<br>
+                  • Analyse des corrélations entre les différentes variables de performance.
+                </p>
+                <p><strong>3. Clustering Hiérarchique Ascendant (CAH) :</strong></p>
+                <p class="project-details__desc-para">
+                  • Standardisation des données pour assurer une contribution égale des variables.<br>
+                  • Construction du dendrogramme pour visualiser les regroupements.<br>
+                  • Identification du nombre optimal de clusters.
+                </p>
+                <p><strong>4. Classification Supervisée avec les Arbres de Décision (CART) :</strong></p>
+                <p class="project-details__desc-para">
+                  • Division des données en ensembles d'entraînement et de test.<br>
+                  • Construction et entraînement du modèle CART.<br>
+                  • Évaluation et optimisation du modèle.
+                </p>
+              </div>
+            </div>
+            <!-- Résultats -->
+            <div class="project-details__desc">
+              <h2 class="project-details__content-title">Résultats</h2>
+              <p class="project-details__desc-para">
+                Les analyses effectuées ont conduit à plusieurs résultats significatifs :
+              </p>
+              <div class="project-details__desc-list">
+                <p><strong>1. Identification de Profils de Joueurs par Clustering :</strong></p>
+                <p class="project-details__desc-para">
+                  • Formation de quatre clusters principaux représentant différents profils de joueurs :<br>
+                  &nbsp;&nbsp;○ Attaquants prolifiques avec un nombre élevé de buts et de passes décisives.<br>
+                  &nbsp;&nbsp;○ Milieux de terrain créatifs avec un grand nombre de passes réussies et de dribbles.<br>
+                  &nbsp;&nbsp;○ Défenseurs solides avec un grand nombre d'interceptions et de tacles.<br>
+                  &nbsp;&nbsp;○ Joueurs polyvalents avec des performances équilibrées dans plusieurs domaines.
+                </p>
+                <p><strong>2. Prédiction du Niveau des Joueurs avec CART :</strong></p>
+                <p class="project-details__desc-para">
+                  • Obtention d'une précision de 85% sur l'ensemble de test.<br>
+                  • Identification des variables les plus influentes dans la prédiction, telles que les minutes jouées, les buts marqués et le taux de réussite des passes.
+                </p>
+                <p><strong>3. Tendances Observées entre les Championnats :</strong></p>
+                <p class="project-details__desc-para">
+                  • Différences significatives dans les performances des joueurs selon le championnat :<br>
+                  &nbsp;&nbsp;○ Premier League : tendance à avoir des joueurs avec des performances offensives élevées.<br>
+                  &nbsp;&nbsp;○ Serie A : accent mis sur les tactiques défensives.
+                </p>
+                <p><strong>4. Insights Stratégiques pour les Clubs :</strong></p>
+                <p class="project-details__desc-para">
+                  • Identification des talents émergents en analysant les jeunes joueurs prometteurs.<br>
+                  • Optimisation des formations et des tactiques d'équipe en fonction des points forts des joueurs.
+                </p>
+              </div>
+            </div>
+            <!-- Conclusion -->
+            <div class="project-details__desc">
+              <h2 class="project-details__content-title">Conclusion</h2>
+              <p class="project-details__desc-para">
+                Ce projet démontre le potentiel de l'analyse de données dans le football pour améliorer la compréhension des performances des joueurs. Les méthodes utilisées peuvent être étendues pour inclure plus de données ou pour explorer d'autres aspects du jeu.
+              </p>
+              <p class="project-details__desc-para">
+                Les résultats obtenus offrent des perspectives intéressantes pour les clubs et les entraîneurs dans la prise de décisions stratégiques en matière de recrutement et de tactique.
+              </p>
+            </div>
+            <!-- Outils et technologies -->
+            <div class="project-details__tools-used">
+              <h2 class="project-details__content-title">Outils et technologies</h2>
+              <div class="skills">
+                <div class="skills__skill">R</div>
+                <div class="skills__skill">Python</div>
+                <div class="skills__skill">Machine Learning</div>
+                <div class="skills__skill">Clustering (CAH)</div>
+                <div class="skills__skill">Classification (CART)</div>
+                <div class="skills__skill">Analyse en composantes principales (ACP)</div>
+                <div class="skills__skill">Analyse de données</div>
+              </div>
+            </div>
+            <!-- Bouton pour le rapport complet -->
+            <div class="project-details__links">
+              <a
+                href="assets/docs/rapport-projet-football.pdf"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+              >Télécharger le rapport complet</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page identique à la page d'accueil -->
+  <footer class="main-footer">
+    <!-- Contenu du pied de page -->
+    <div class="main-container">
+      <div class="main-footer__upper">
+        <div class="main-footer__row main-footer__row-1">
+          <h2 class="heading heading-sm text-lt">Fossi Cedric</h2>
+          <p class="main-footer__short-desc">
+            Ingénieur passionné par la data science et l'optimisation algorithmique.
+          </p>
+        </div>
+        <div class="main-footer__row main-footer__row-2">
+          <h2 class="heading heading-sm text-lt">Contactez-moi</h2>
+          <div class="main-footer__social-cont">
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/fossi-cedric/">
+              <img
+                class="main-footer__icon"
+                src="./assets/png/linkedin-ico.png"
+                alt="LinkedIn"
+              />
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://github.com/fossicedric">
+              <img
+                class="main-footer__icon"
+                src="./assets/png/github-ico.png"
+                alt="GitHub"
+              />
+            </a>
+            <!-- Ajoutez d'autres liens si nécessaire -->
+          </div>
+        </div>
+      </div>
+      <div class="main-footer__lower">
+        &copy; 2024 Fossi Cedric. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

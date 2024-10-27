@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Métadonnées -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Titre de la page -->
+  <title>Parallélisation d'une simulation thermique | Fossi Cedric</title>
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/png/favicon.png" type="image/x-icon" />
+</head>
+<body>
+  <!-- En-tête identique à la page d'accueil -->
+  <header class="header">
+    <!-- Contenu de l'en-tête -->
+    <div class="header__content">
+      <div class="header__logo-container">
+        <a href="./" class="header__logo-link">
+          <span class="header__logo-sub">Fossi Cedric</span>
+        </a>
+      </div>
+      <div class="header__main">
+        <ul class="header__links">
+          <li class="header__link-wrapper">
+            <a href="index.html" class="header__link">Accueil</a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="index.html#about" class="header__link">À propos</a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="index.html#projects" class="header__link">Projets</a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="index.html#contact" class="header__link">Contact</a>
+          </li>
+        </ul>
+        <!-- Menu mobile -->
+        <div class="header__main-ham-menu-cont">
+          <img
+            src="./assets/png/menu-icon.png"
+            alt="Menu icon"
+            class="header__main-ham-menu"
+          />
+          <img
+            src="./assets/png/close-icon.png"
+            alt="Close icon"
+            class="header__main-ham-menu-close d-none"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Contenu du menu mobile -->
+    <div class="header__sm-menu">
+      <div class="header__sm-menu-content">
+        <ul class="header__sm-menu-links">
+          <li class="header__sm-menu-link">
+            <a href="index.html">Accueil</a>
+          </li>
+          <li class="header__sm-menu-link">
+            <a href="index.html#about">À propos</a>
+          </li>
+          <li class="header__sm-menu-link">
+            <a href="index.html#projects">Projets</a>
+          </li>
+          <li class="header__sm-menu-link">
+            <a href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <main>
+    <!-- Section Hero du projet -->
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Parallélisation d'une simulation thermique</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            Optimisation du temps de calcul d'une simulation thermique pour un processeur AMD EPYC "Rome" avec dissipateur thermique.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Détails du projet -->
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <!-- Contenu principal -->
+          <div class="project-details__content-main">
+            <!-- Introduction -->
+            <div class="project-details__desc">
+              <h2 class="project-details__content-title">Introduction</h2>
+              <p class="project-details__desc-para">
+                Avec l'évolution rapide des technologies informatiques, les microprocesseurs modernes, tels que l'AMD EPYC "Rome", sont devenus extrêmement puissants, consommant parfois plus de 200 watts. Cette consommation énergétique élevée génère une chaleur considérable qui, si elle n'est pas correctement dissipée, peut nuire aux performances et à la fiabilité du processeur. Les dissipateurs thermiques jouent un rôle essentiel en transférant cette chaleur hors du processeur vers l'environnement extérieur.
+              </p>
+              <p class="project-details__desc-para">
+                Ce projet se concentre sur la simulation numérique du transfert thermique au sein d'un dissipateur de chaleur pour processeur. En optimisant le processus de simulation par parallélisation, nous visons à modéliser efficacement la dissipation thermique sur une grille complexe, permettant des prédictions précises des distributions de température dans le dissipateur.
+              </p>
+            </div>
+            <!-- Approche -->
+            <div class="project-details__desc">
+              <h2 class="project-details__content-title">Approche</h2>
+              <p class="project-details__desc-para">
+                Le projet consistait à paralléliser une simulation thermique complexe pour accélérer les temps de calcul. Nous avons adopté une méthodologie en plusieurs étapes clés :
+              </p>
+              <div class="project-details__desc-list">
+                <p><strong>1. Analyse du Code Séquentiel Initial :</strong></p>
+                <p class="project-details__desc-para">
+                  • Étude du modèle thermique représentant le transfert de chaleur dans le dissipateur.<br>
+                  • Identification des points critiques du code consommant le plus de temps.
+                </p>
+                <p><strong>2. Parallélisation avec MPI :</strong></p>
+                <p class="project-details__desc-para">
+                  • Découpage du domaine de calcul en sous-domaines pour les processus MPI.<br>
+                  • Mise en œuvre du découpage 1D (axe Z) et 2D (axes Z et Y).
+                </p>
+                <p><strong>3. Optimisation des Communications :</strong></p>
+                <p class="project-details__desc-para">
+                  • Utilisation de communications non bloquantes pour réduire les temps d'attente.<br>
+                  • Réduction du volume de données échangées en n'envoyant que les informations nécessaires.
+                </p>
+                <p><strong>4. Mise en Place du Checkpointing :</strong></p>
+                <p class="project-details__desc-para">
+                  • Sauvegarde périodique de l'état de la simulation pour permettre une reprise en cas d'interruption.<br>
+                  • Sérialisation des données pour l'écriture efficace sur disque.
+                </p>
+                <p><strong>5. Validation et Tests de Performance :</strong></p>
+                <p class="project-details__desc-para">
+                  • Comparaison des résultats parallèles avec le code séquentiel pour vérifier l'exactitude.<br>
+                  • Mesure des temps d'exécution et analyse du scaling.
+                </p>
+              </div>
+            </div>
+            <!-- Résultats -->
+            <div class="project-details__desc">
+              <h2 class="project-details__content-title">Résultats</h2>
+              <p class="project-details__desc-para">
+                Les techniques de parallélisation mises en œuvre ont conduit à des améliorations significatives des performances de la simulation thermique :
+              </p>
+              <div class="project-details__desc-list">
+                <p><strong>1. Gain de Performance avec le Découpage 1D :</strong></p>
+                <p class="project-details__desc-para">
+                  • Réduction du temps d'exécution de 760 à 168 secondes avec 12 processus.<br>
+                  • Speedup de 4,5x par rapport au code séquentiel.<br>
+                  • Limites observées au-delà de 20 processus en raison de l'augmentation des communications.
+                </p>
+                <p><strong>2. Améliorations avec le Découpage 2D :</strong></p>
+                <p class="project-details__desc-para">
+                  • Temps d'exécution réduit à 154 secondes avec 32 processus.<br>
+                  • Speedup de 4,94x, démontrant une meilleure scalabilité.
+                </p>
+                <p><strong>3. Optimisation des Communications avec MPI Non Bloquant :</strong></p>
+                <p class="project-details__desc-para">
+                  • Temps d'exécution diminué à 135 secondes.<br>
+                  • Speedup total de 5,63x grâce à la réduction des temps d'attente.
+                </p>
+                <p><strong>4. Validation de la Précision des Résultats :</strong></p>
+                <p class="project-details__desc-para">
+                  • Écart inférieur à 0,01% entre les versions parallèles et séquentielles.<br>
+                  • Confirmation que la parallélisation n'a pas affecté l'exactitude.
+                </p>
+                <p><strong>5. Analyse du Scaling et de l'Efficacité :</strong></p>
+                <p class="project-details__desc-para">
+                  • Observation d'une efficacité acceptable jusqu'à 32 processus.<br>
+                  • Production de graphes pour visualiser les performances en fonction du nombre de processus.
+                </p>
+              </div>
+            </div>
+            <!-- Conclusion -->
+            <div class="project-details__desc">
+              <h2 class="project-details__content-title">Conclusion</h2>
+              <p class="project-details__desc-para">
+                Ce projet a permis de démontrer l'efficacité de la parallélisation pour accélérer les simulations thermiques complexes. Les améliorations apportées peuvent être appliquées à d'autres simulations nécessitant une puissance de calcul élevée.
+              </p>
+              <p class="project-details__desc-para">
+                Les résultats obtenus offrent des perspectives pour optimiser les performances des processeurs et améliorer la conception des systèmes de dissipation thermique.
+              </p>
+            </div>
+            <!-- Outils et technologies -->
+            <div class="project-details__tools-used">
+              <h2 class="project-details__content-title">Outils et technologies</h2>
+              <div class="skills">
+                <div class="skills__skill">C</div>
+                <div class="skills__skill">MPI</div>
+                <div class="skills__skill">Parallélisation</div>
+                <div class="skills__skill">Simulation numérique</div>
+                <div class="skills__skill">Grid5000</div>
+              </div>
+            </div>
+            <!-- Bouton pour le rapport complet -->
+            <div class="project-details__links">
+              <a
+                href="assets/docs/rapport-projet-simulation-thermique.pdf"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+              >Télécharger le rapport complet</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+ <!-- Pied de page identique à la page d'accueil -->
+ <footer class="main-footer">
+    <!-- Contenu du pied de page -->
+    <div class="main-container">
+      <div class="main-footer__upper">
+        <div class="main-footer__row main-footer__row-1">
+          <h2 class="heading heading-sm text-lt">Fossi Cedric</h2>
+          <p class="main-footer__short-desc">
+            Ingénieur passionné par la data science et l'optimisation algorithmique.
+          </p>
+        </div>
+        <div class="main-footer__row main-footer__row-2">
+          <h2 class="heading heading-sm text-lt">Contactez-moi</h2>
+          <div class="main-footer__social-cont">
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/fossi-cedric/">
+              <img
+                class="main-footer__icon"
+                src="./assets/png/linkedin-ico.png"
+                alt="LinkedIn"
+              />
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://github.com/fossicedric">
+              <img
+                class="main-footer__icon"
+                src="./assets/png/github-ico.png"
+                alt="GitHub"
+              />
+            </a>
+            <!-- Ajoutez d'autres liens si nécessaire -->
+          </div>
+        </div>
+      </div>
+      <div class="main-footer__lower">
+        &copy; 2024 Fossi Cedric. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

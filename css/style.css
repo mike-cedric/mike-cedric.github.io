@@ -702,3 +702,9 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
+
+/* Styles spécifiques pour les listes dans les sections de projet */
+.project-details__desc-list p strong {
+  font-size: 1.8rem;
+  color: #333;
+}

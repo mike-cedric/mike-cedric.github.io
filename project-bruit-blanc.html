@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Métadonnées -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Titre de la page -->
+  <title>Optimisation du traitement du bruit blanc | Fossi Cedric</title>
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/png/favicon.png" type="image/x-icon" />
+</head>
+<body>
+  <!-- En-tête identique à la page d'accueil -->
+  <header class="header">
+    <!-- Contenu de l'en-tête -->
+    <div class="header__content">
+      <div class="header__logo-container">
+        <a href="./" class="header__logo-link">
+          <span class="header__logo-sub">Fossi Cedric</span>
+        </a>
+      </div>
+      <div class="header__main">
+        <ul class="header__links">
+          <li class="header__link-wrapper">
+            <a href="index.html" class="header__link">Accueil</a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="index.html#about" class="header__link">À propos</a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="index.html#projects" class="header__link">Projets</a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="index.html#contact" class="header__link">Contact</a>
+          </li>
+        </ul>
+        <!-- Menu mobile -->
+        <div class="header__main-ham-menu-cont">
+          <img
+            src="./assets/png/menu-icon.png"
+            alt="Menu icon"
+            class="header__main-ham-menu"
+          />
+          <img
+            src="./assets/png/close-icon.png"
+            alt="Close icon"
+            class="header__main-ham-menu-close d-none"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Contenu du menu mobile -->
+    <div class="header__sm-menu">
+      <div class="header__sm-menu-content">
+        <ul class="header__sm-menu-links">
+          <li class="header__sm-menu-link">
+            <a href="index.html">Accueil</a>
+          </li>
+          <li class="header__sm-menu-link">
+            <a href="index.html#about">À propos</a>
+          </li>
+          <li class="header__sm-menu-link">
+            <a href="index.html#projects">Projets</a>
+          </li>
+          <li class="header__sm-menu-link">
+            <a href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Contenu principal -->
+  <main>
+    <!-- Section Hero du projet -->
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Optimisation du traitement du bruit blanc</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            Amélioration des performances du traitement du bruit blanc en utilisant la FFT, OpenMP et la vectorisation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Détails du projet -->
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <!-- Contenu principal -->
+          <div class="project-details__content-main">
+            <!-- Introduction -->
+            <div class="project-details__desc">
+              <h2 class="project-details__content-title">Introduction</h2>
+              <p class="project-details__desc-para">
+                Le traitement efficace du bruit blanc est essentiel dans de nombreuses applications de traitement du signal, notamment en audio, en communication et en analyse de données. L'optimisation des algorithmes de traitement permet d'améliorer les performances des systèmes et de réduire les temps de calcul.
+              </p>
+              <p class="project-details__desc-para">
+                Ce projet vise à optimiser le traitement du bruit blanc en utilisant la Transformée de Fourier Rapide (FFT), combinée à des techniques de parallélisation avec OpenMP et de vectorisation. L'objectif est d'accélérer le traitement tout en maintenant une précision élevée.
+              </p>
+            </div>
+            <!-- Méthodologie -->
+            <div class="project-details__desc">
+              <h2 class="project-details__content-title">Méthodologie</h2>
+              <p class="project-details__desc-para">
+                Ce projet visait à optimiser le traitement du bruit blanc en utilisant la FFT, la parallélisation et la vectorisation. Voici les étapes détaillées :
+              </p>
+              <div class="project-details__desc-list">
+                <p><strong>1. Analyse du Code Existant :</strong></p>
+                <p class="project-details__desc-para">
+                  • Étude de l'implémentation de la FFT récursive.<br>
+                  • Identification des goulots d'étranglement dans le code.
+                </p>
+                <p><strong>2. Transformation de la FFT Récursive en Version Itérative :</strong></p>
+                <p class="project-details__desc-para">
+                  • Réécriture de l'algorithme pour faciliter la parallélisation.<br>
+                  • Validation de la nouvelle implémentation pour assurer l'exactitude.
+                </p>
+                <p><strong>3. Parallélisation avec OpenMP :</strong></p>
+                <p class="project-details__desc-para">
+                  • Utilisation de directives OpenMP pour paralléliser les boucles critiques.<br>
+                  • Gestion des variables partagées et privées pour éviter les conflits.
+                </p>
+                <p><strong>4. Vectorisation des Calculs :</strong></p>
+                <p class="project-details__desc-para">
+                  • Utilisation des instructions SIMD pour traiter plusieurs données simultanément.<br>
+                  • Alignement mémoire pour optimiser les accès et les opérations vectorielles.
+                </p>
+                <p><strong>5. Optimisations Supplémentaires :</strong></p>
+                <p class="project-details__desc-para">
+                  • Élimination des appels de fonctions inutiles.<br>
+                  • Utilisation des options d'optimisation du compilateur.
+                </p>
+                <p><strong>6. Validation et Évaluation des Performances :</strong></p>
+                <p class="project-details__desc-para">
+                  • Comparaison des temps d'exécution avant et après optimisation.<br>
+                  • Test sur différentes tailles de données pour évaluer l'efficacité.
+                </p>
+              </div>
+            </div>
+            <!-- Résultats -->
+            <div class="project-details__desc">
+              <h2 class="project-details__content-title">Résultats</h2>
+              <p class="project-details__desc-para">
+                Les optimisations apportées au traitement du bruit blanc ont permis d'améliorer considérablement les performances du programme :
+              </p>
+              <div class="project-details__desc-list">
+                <p><strong>1. Amélioration du Temps d'Exécution :</strong></p>
+                <p class="project-details__desc-para">
+                  • Réduction de 15% du temps d'exécution grâce à la version itérative de la FFT.<br>
+                  • Réduction supplémentaire de 70% avec la parallélisation OpenMP.<br>
+                  • Gain de 25% supplémentaire grâce à la vectorisation des calculs.
+                </p>
+                <p><strong>2. Efficacité de la Parallélisation :</strong></p>
+                <p class="project-details__desc-para">
+                  • Bonne scalabilité jusqu'à 8 cœurs.<br>
+                  • Utilisation CPU proche de 100% lors de l'exécution parallèle.
+                </p>
+                <p><strong>3. Qualité des Résultats du Traitement du Signal :</strong></p>
+                <p class="project-details__desc-para">
+                  • Maintien de l'intégrité des données après optimisation.<br>
+                  • Validation avec des benchmarks standards du traitement du signal.
+                </p>
+                <p><strong>4. Analyse de l'Utilisation Mémoire :</strong></p>
+                <p class="project-details__desc-para">
+                  • Réduction de la consommation mémoire grâce à l'élimination des copies inutiles.<br>
+                  • Amélioration des accès mémoire par alignement des données.
+                </p>
+                <p><strong>5. Comparaison avec les Bibliothèques Optimisées :</strong></p>
+                <p class="project-details__desc-para">
+                  • Performances compétitives par rapport à des bibliothèques comme FFTW.<br>
+                  • Identification de pistes pour des optimisations futures.
+                </p>
+              </div>
+            </div>
+            <!-- Conclusion -->
+            <div class="project-details__desc">
+              <h2 class="project-details__content-title">Conclusion</h2>
+              <p class="project-details__desc-para">
+                Ce projet a démontré que l'optimisation algorithmique, combinée à la parallélisation et à la vectorisation, peut améliorer significativement les performances des applications de traitement du signal.
+              </p>
+              <p class="project-details__desc-para">
+                Les techniques mises en œuvre peuvent être appliquées à d'autres domaines nécessitant un traitement intensif des données.
+              </p>
+            </div>
+            <!-- Outils et technologies -->
+            <div class="project-details__tools-used">
+              <h2 class="project-details__content-title">Outils et technologies</h2>
+              <div class="skills">
+                <div class="skills__skill">C</div>
+                <div class="skills__skill">OpenMP</div>
+                <div class="skills__skill">Vectorisation (SIMD)</div>
+                <div class="skills__skill">FFT</div>
+                <div class="skills__skill">Optimisation algorithmique</div>
+              </div>
+            </div>
+            
+            <!-- Bouton pour le rapport complet -->
+            <div class="project-details__links">
+              <a
+                href="assets/docs/rapport-projet-bruit-blanc.pdf"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+              >Télécharger le rapport complet</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- Pied de page identique à la page d'accueil -->
+ <footer class="main-footer">
+    <!-- Contenu du pied de page -->
+    <div class="main-container">
+      <div class="main-footer__upper">
+        <div class="main-footer__row main-footer__row-1">
+          <h2 class="heading heading-sm text-lt">Fossi Cedric</h2>
+          <p class="main-footer__short-desc">
+            Ingénieur passionné par la data science et l'optimisation algorithmique.
+          </p>
+        </div>
+        <div class="main-footer__row main-footer__row-2">
+          <h2 class="heading heading-sm text-lt">Contactez-moi</h2>
+          <div class="main-footer__social-cont">
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/fossi-cedric/">
+              <img
+                class="main-footer__icon"
+                src="./assets/png/linkedin-ico.png"
+                alt="LinkedIn"
+              />
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://github.com/fossicedric">
+              <img
+                class="main-footer__icon"
+                src="./assets/png/github-ico.png"
+                alt="GitHub"
+              />
+            </a>
+            <!-- Ajoutez d'autres liens si nécessaire -->
+          </div>
+        </div>
+      </div>
+      <div class="main-footer__lower">
+        &copy; 2024 Fossi Cedric. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
